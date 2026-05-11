@@ -1,25 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 .hero {
-    background: linear-gradient(to right, #576985, #a698bd);
+    background: linear-gradient(to right, #0f172a, #1e293b);
     color: white;
+    padding-top: 100px;
 }
+
 .profile-img {
-    width: 220px;
-    height: 220px;
+    width: 320px;
+    height: 320px;
     object-fit: cover;
+    border: 6px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
+
 .skill-card {
-    transition: 0.3s;
+    transition: 0.3s ease;
+    border: none;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
+
 .skill-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
-.social-links a {
-    text-decoration: none;
+
+.nav-link {
+    transition: 0.3s;
 }
-.social-links a:hover {
-    text-decoration: underline;
+
+.nav-link:hover {
+    color: #0d6efd !important;
+}
+
+.contact {
+    background-color: #f8f9fa;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #0d6efd;
+}
+
+footer a:hover {
+    color: #0d6efd !important;
 }
