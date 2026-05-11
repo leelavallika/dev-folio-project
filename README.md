@@ -44,4 +44,4 @@ dev-folio-project
 ---
 
 ## Author
-Leelavallika
+Leela Vallika
