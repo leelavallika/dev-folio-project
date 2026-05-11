@@ -1,5 +1,13 @@
 # Dev-Folio Project
+
 A responsive portfolio landing page built using HTML, CSS, Bootstrap, and JavaScript.
+
+---
+
+## Live Demo
+🔗 https://leelavallika.github.io/dev-folio-project/
+
+---
 
 ## Features
 - Responsive Bootstrap Navbar
@@ -9,9 +17,31 @@ A responsive portfolio landing page built using HTML, CSS, Bootstrap, and JavaSc
 - Responsive Layout
 - Hover Effects
 
+---
+
 ## Technologies Used
 - HTML5
 - CSS3
-- Bootstrap 
+- Bootstrap 5
 - JavaScript
-- Git & GitHub
+- Git
+- GitHub
+
+---
+
+## Folder Structure
+
+```plaintext
+dev-folio-project
+│
+├── images
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+```
+
+---
+
+## Author
+Leelavallika
