@@ -1,39 +1,51 @@
-const form = document.getElementById("contactForm");
+const form = document.getElementById('contactForm');
 
-const nameInput = document.getElementById("name");
-const emailInput = document.getElementById("email");
-const messageInput = document.getElementById("message");
+form.addEventListener('submit', function (e) {
 
-const nameError = document.getElementById("nameError");
-const emailError = document.getElementById("emailError");
-const messageError = document.getElementById("messageError");
-
-form.addEventListener("submit", function (e) {
     e.preventDefault();
-    nameError.textContent = "";
-    emailError.textContent = "";
-    messageError.textContent = "";
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const messageError = document.getElementById('messageError');
+
+    nameError.textContent = '';
+    emailError.textContent = '';
+    messageError.textContent = '';
 
     let isValid = true;
-    if (nameInput.value.trim() === "") {
-        nameError.textContent = "Name is required";
+    if (name === '') {
+        nameError.textContent = 'Name is required';
         isValid = false;
     }
+
     const emailPattern = /.+@.+\..+/;
-    if (emailInput.value.trim() === "") {
-        emailError.textContent = "Email is required";
-        isValid = false;
-    } else if (!emailPattern.test(emailInput.value)) {
-        emailError.textContent = "Enter a valid email";
+    if (email === '') {
+        emailError.textContent = 'Email is required';
         isValid = false;
     }
-    if (messageInput.value.trim().length < 10) {
+    else if (!emailPattern.test(email)) {
+        emailError.textContent = 'Enter a valid email';
+        isValid = false;
+    }
+
+    if (message.length < 10) {
         messageError.textContent =
-            "Message must be at least 10 characters";
+            'Message must contain at least 10 characters';
+
         isValid = false;
     }
+
     if (isValid) {
-        console.log("Form submitted successfully!");
+
+        console.log('Form submitted successfully!');
+
+        alert('Form submitted successfully!');
+
+        form.reset();
     }
 
 });
